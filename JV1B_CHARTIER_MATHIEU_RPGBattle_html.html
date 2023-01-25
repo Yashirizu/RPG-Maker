@@ -1,0 +1,80 @@
+<!--
+Un personnage et un monstre se font face, et le personnage peut attaquer le monstre, lui
+faisant perdre des points de vie. Quand le personnage attaque, cela déclenche ensuite la
+riposte du monstre, qui lui fait perdre des points de vie. Un dialogue explique ce qu’il se passe
+lors de chaque action, accompagné d’une animation.
+
+Il y a 4 personnages. Il faut que les 4 personnages aient attaqué pour que le monstre riposte.
+Il y a 3 ennemis. Ils ripostent chacun leur tour, attaquant chacun aléatoirement un
+personnage, dans la même phase de riposte des monstres.
+
+Les personnages ont des points de vie et des points de mana, affichés quelque part à l’écran.
+
+Quand les points de vie d’un des personnages arrive à 0 ou moins, il disparaît ou meurt à
+l’écran, et ne peut plus rien faire. 
+
+Quand tous les personnages meurent, la partie est perdue.
+Les points de vie des monstres s’affichent dans une infobulle quand on passe le curseur sur
+leur image.
+Quand les points de vie d’un des monstres arrive à 0 ou moins, il disparaît et ne
+prend plus part aux ripostes.
+Quand tous les monstres meurent, la partie est gagnée.
+Un seul personnage peut attaquer à la fois. Il est mis en valeur pour que l’on sache que c’est
+pour lui qu’on peut choisir des actions, et son menu de choix d’action s’affiche.
+
+On peut choisir l’action d’un personnage parmi 3 différentes : attaquer, défendre, et une
+action spéciale qui dépend du personnage (poison, soin, boule de feu...).
+Les actions spéciales coûtent et nécessitent du mana.
+
+Une même action ne peut pas être sélectionnée par un même personnage deux tours de suite.
+Une action qui ne peut pas être sélectionnée apparaît clairement comme telle (exemple :
+option grisée).
+
+
+faire apparaitre le fond
+intégrer le 1 er personnage et 1er ennemis 
+(à voir pour l'animation) 
+voir les vidéo
+
+-->
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Prototype de RPG Battle</title>
+        <meta charset="utf-8" />
+        <link href="JV1B_CHARTIER_MATHIEU_RPGBattle_CSS.css" media="all" rel="stylesheet" type="text/css" />
+       <link href="E:\etpa_usb\country-platform-files\"/>
+       <script src="JV1B_CHARTIER_MATHIEU_RPGBattle.js" async></script>
+       
+    </head>
+    <body>
+        <title>Prototype de RPG Battle</title>
+
+            <section>
+                <div id="battle">
+                    <div>Bienvenu dans mon projet RPG Battle</div>
+                    <div>Vous incarnez un jeune héro en quête d'aventure</div>
+                    <div id="maDiv">un monstre apparait, cliquer ici pour lui infliger des dommages</div>
+                    <div id="pvmonstre1">100</div>
+                    <div id="afficheAction"></div>
+                    <div class="game-container">
+                    <canvas class="game-canvas" width="352" height="198"></canvas>
+                    <div id="battle"> phase de combat </div>
+               
+                    <div> Bien une fois l'attaque effectué votre adversaire va contre attaquer</div>
+                    <div> maintenant que le premier tour est passé, le monstre appel des renforts pour vous battre</div>
+                    <div> La situation est devenu complexe, fort heureusement vos alliés viennent vous preter main forte</div>
+                    <div> La phase de combat va rester le même vous allez, vous et votre équipe attaquer en premiers</div>
+                    <div> puis les les différents monstres vont répliquer en conséquence. </div>
+                    <div> Pouvez sélectionner lieu de l'attaque en cliquant dessus.</div>
+                
+                    <div>Le joueur 2 prend la suite et attaque également le monstre,</div> 
+                    <div id ="pvmonstre1"> ce qui inflige  points de dégats</div>
+                    <div id ="attaque1"> "pvmonstre1" -+ "attaque1"</div>
+                    <div>suivi de près par joueur 3 et joueur 4</div>
+                    <div id="pvmonstre1"></div> 
+                </div>
+            </section>
+    </body>
+</html>

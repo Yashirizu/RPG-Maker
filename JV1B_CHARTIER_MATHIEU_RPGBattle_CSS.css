@@ -1,0 +1,33 @@
+* {
+    box-sizing: border-box
+}
+ body {
+    color: black;
+    background-color: white;
+    
+}
+
+    
+
+
+.game-container {
+    position: relative;
+    width: 900px;
+    height: 600px;
+    margin: auto;
+    margin-top: 20px;
+    outline: 1px solid #fff;
+    background-image:url(country-platform-preview.png);
+    background-size: cover;
+    display: flex;
+    justify-content: end;
+}
+
+section {
+
+    display:block;
+    width: 400px;
+    height: 160px;
+}
+
+m
